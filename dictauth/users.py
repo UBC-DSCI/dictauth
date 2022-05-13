@@ -118,6 +118,13 @@ def list_users(args):
     print(tabulate(users, headers=headers))
     print()
 
+def clear_users(args):
+    resp = input("Are you sure? Type yes and hit enter to confirm.")
+    if resp == "yes":
+        _save_user_dict({}, args.directory)
+    else:
+        print("Skipping.")
+
 def add_user(args):
     username = args.username
     salt = args.salt
