@@ -35,6 +35,13 @@ clear_user_parser.add_argument(
   default='/srv/jupyterhub/',
   help="The directory containing the jupyterhub configuration file."
 )
+clear_user_parser.add_argument(
+  '--except',
+  dest='except',
+  action='store',
+  default=[],
+  help="The names of users to keep in the dictionary. Enter individual usernames separated by spaces."
+)
 
 
 add_user_parser = subparsers.add_parser('add_user', help='Add a user to the dictionary.')
