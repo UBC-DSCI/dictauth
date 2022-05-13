@@ -123,11 +123,9 @@ def clear_users(args):
     directory = args.directory
     epwrds = _load_user_dict(directory)
     epwrds = {unm : epwrds[unm] for unm in epwrds if unm in kept}
-    resp = input(f"Are you sure? This will delete *all* users except\n{[unm for unm in epwrds]}\nType yes and hit enter to confirm.")
+    resp = input(f"Are you sure? This will delete *all* users except\n{[unm for unm in epwrds]}\nType yes and hit enter to confirm: ")
     if resp == "yes":
-        print("New user dictionary")
-        print(epwrds)
-        #_save_user_dict({}, args.directory)
+        _save_user_dict(epwrds, args.directory)
     else:
         print("Skipping.")
 
