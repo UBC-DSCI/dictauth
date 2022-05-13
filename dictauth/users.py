@@ -120,6 +120,7 @@ def list_users(args):
 
 def clear_users(args):
     kept = args.kept
+    directory = args.directory
     epwrds = _load_user_dict(directory)
     epwrds = {unm : epwrds[unm] for unm in epwrds if unm in kept}
     resp = input(f"Are you sure? This will delete *all* users except\n{[unm for unm in epwrds]}\nType yes and hit enter to confirm.")
