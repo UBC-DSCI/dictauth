@@ -37,7 +37,7 @@ clear_user_parser.add_argument(
 )
 clear_user_parser.add_argument(
   '--except',
-  dest='except',
+  dest='kept',
   action='store',
   default=[],
   help="The names of users to keep in the dictionary. Enter individual usernames separated by spaces."
