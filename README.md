@@ -32,6 +32,12 @@ To remove a user from the JupyterHub authentication dictionary, do
 sudo dictauth remove_user --user their_username
 ```
 
+To remove *all* users from the JupyterHub authentication dictionary, do
+```
+sudo dictauth clear_users
+```
+and follow the prompt.
+
 To make a user an admin (who can use their own password to log into any username), do
 ```
 sudo dictauth make_admin --user their_username
